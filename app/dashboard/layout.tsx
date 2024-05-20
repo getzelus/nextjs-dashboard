@@ -1,4 +1,14 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Acme Dashboard',
+  },
+  description: 'Next.js Dashboard.',
+  metadataBase: new URL('https://nextjs.com'),
+};
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
