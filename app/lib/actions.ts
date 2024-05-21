@@ -113,8 +113,10 @@ export type State = {
   prevState: string | undefined,
   formData: FormData,
 ) {
+	let fake = 2;
   try {
-    await signIn('credentials', formData);
+    // await signIn('credentials', formData);
+	fake = 3;
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
